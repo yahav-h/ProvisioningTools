@@ -27,6 +27,5 @@ while data.get('status') == 'pending':
     )
     data = response.json()
     time.sleep(3)
-print("\t\t**starting service**")
-t = callInThread(target=ProcessExecutor.execute, args=(Commands.SERVICE_START.value % service_path,), daemon=True)
-time.sleep(3)
+print("\t\t**database restarted**")
+exit(0)
